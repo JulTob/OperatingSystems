@@ -17,6 +17,7 @@ int main (int argc, char *argv[]){
   n = atoi(argv[1]);
   for (i = 1; i < n;  i++) {
     pid = fork();
+    if (pid < 0) break; /*Error control*///
     if (pid) {  //  0 means is child
       a += i;
       //       wait(pid);  /* To wait for the children*/
