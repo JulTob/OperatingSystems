@@ -4,7 +4,9 @@
 
 int main (int argc, char *argv[]){
   pid_t pid = 0;
-  int i, n;
+  int i, n; 
+    //  i counts iterations
+    //  a counts childrens 
   int a = 1;
   if (argc != 2){
     fprintf( stderr, "Uso: %s procesos\n", argv[0]);
