@@ -8,8 +8,8 @@ int main (int argc, char *argv[]){
   pid_t pid = 0;
   int i, n; 
     //  i counts iterations
-    //  a counts childrens 
   int a = 1;
+    //  a counts childrens 
   if (argc != 2){
     fprintf( stderr, "Uso: %s procesos\n", argv[0]);
   return 1;
