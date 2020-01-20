@@ -11,21 +11,23 @@ int main (int argc, char *argv[])
       "Uso: %s [nº de procesos]\n",
       argv[0]);
       return 1;
-    }
-    n = atoi(argv[1]);  //str to integer
-    for (i = 1; i ; i++) {
+  }
+  n = atoi(argv[1]);  //str to integer
+  for (i = 1; i ; i++) {
       pid = fork();
       if (pid) {
         a += i;
         break;
       }
-    }
-    fprintf(
+  }
+  fprintf(
       stderr,
       "i:%d Proceso ID:%ld Padre-ID:%ld Hijo-ID:%ld a=%ld\n",
       i,
       (long)getpid(),
       (long)getppid(),
-      (long)pid, a);
-      return 0;
+      (long)pid, 
+      a);
+     
+  return 0;
 }
