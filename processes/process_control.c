@@ -7,7 +7,8 @@
 //  pid_t fork(void); getpid
 
 void  run_xeyes(), run_xcalc(), run_xload(),
-      run_xlogo(), run_xclock(),  check_tree(pid_t);
+      run_xlogo(), run_xclock(),  
+      check_tree(pid_t);
 
 int main (int argc, char *argv[]){
 
@@ -52,7 +53,8 @@ int main (int argc, char *argv[]){
 
 }
 
-void run_xcalc(){
+void 
+run_xcalc(){
   do {
     pid_t looper = fork();
     if (looper==0){
@@ -66,7 +68,8 @@ void run_xcalc(){
 
 };
 
-void run_xeyes(){
+void 
+run_xeyes(){
   do {
     pid_t looper = fork();
     if (looper==0){
@@ -81,7 +84,8 @@ void run_xeyes(){
 
 };
 
-void run_xload(){
+void 
+run_xload(){
   do {
     pid_t looper = fork();
     if (looper==0){
@@ -96,7 +100,8 @@ void run_xload(){
 
 };
 
-void run_xlogo(){
+void 
+run_xlogo(){
   do {
     pid_t looper = fork();
     if (looper==0){
@@ -111,7 +116,8 @@ void run_xlogo(){
 
 }
 
-void run_xclock(){
+void 
+run_xclock(){
   do {
     pid_t looper = fork();
     if (looper==0){
