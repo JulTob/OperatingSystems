@@ -18,7 +18,12 @@ int main (int argc, char *argv[]){
   for (i = 1; i < n;  i++) {
     pid = fork();
     if (pid < 0) break; /*Error control*///
-    if (pid) {  //  0 means is child
+    if (pid == 0) fprintf(  //  0 means is child
+      stderr,
+      "i:%d a=%d\n",
+      i,
+      a);
+    if (pid) { 
       a += i;
       //       wait(pid);  /* To wait for the children*/
       break;
